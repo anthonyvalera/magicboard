@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  background: #555c80;
+  -webkit-font-smoothing: antialiased;
+  font-family: Nats;
+  font-size: 25px;
+  border: 20px solid #ffffff;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-blend-mode: soft-light;
+}
+
+h1 {
+  font-size: 60px;
+  color: #fff;
+  font-family: NATS;
+  letter-spacing: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.7;
+}

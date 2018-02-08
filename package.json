@@ -1,0 +1,41 @@
+{
+  "name": "magic-post",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "./views",
+  "description": "GET/POST Magic Afternoon",
+  "scripts": {
+    "watch": "webpack -w",
+    "server": "nodemon index.js",
+    "build": "webpack",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
+    "@babel/preset-react": "^7.0.0-beta.39",
+    "axios": "^0.17.1",
+    "babel-loader": "^8.0.0-beta.0",
+    "body-parser": "^1.18.2",
+    "css-loader": "^0.28.9",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "http": "0.0.0",
+    "node-sass-chokidar": "0.0.3",
+    "path": "^0.12.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.20.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.10.0"
+  }
+}
