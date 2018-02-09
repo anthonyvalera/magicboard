@@ -18,6 +18,7 @@ function awardPoints(teamName, index, points, res) {
     singleTeam.points += points;
     singleTeam.solved.push(index);
 
+    teams.sort((a,b) => a.points <= b.points ? 1 : -1);
     io.emit('update', teams);
 
     return res.json({ message: 'Nice! Correct Answer!'})

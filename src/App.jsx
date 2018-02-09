@@ -11,10 +11,7 @@ export class App extends Component {
       teams: allTeams || null
     }
 
-    socket.on('update', (teams) => {
-      teams.sort((a,b) => a.points + b.points);
-      this.setState({ teams })
-    });
+    socket.on('update', (teams) => this.setState({ teams }));
   }
 
   render() {
