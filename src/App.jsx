@@ -1,32 +1,33 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import io from 'socket.io-client';
+let socket = io();
 
 export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      teams: allTeams
+      teams: allTeams || null
     }
 
-    setInterval(this.poll, 10000);
-  }
-
-  poll = () => {
-    axios.get('/board').then(r => this.setState({teams: r.data}));
+    socket.on('update', (teams) => {
+      teams.sort((a,b) => a.points + b.points);
+      this.setState({ teams })
+    });
   }
 
   render() {
     return (
       <section id="main">
         <h1>Leaderboard</h1>
-        <p>Current standings</p>
+        <p>Start at /register</p>
         <section>
-            {!!this.state.teams && this.state.teams.map(team => {
+            {!!this.state.teams && this.state.teams.map((team, index) => {
               return (
-                <div key={team.name}>
+                <div className="card" key={`${team.name}_${index}`}>
                   <h2>{team.name}</h2>
-                  <p>Points: {team.points} </p>
+                  <p>{team.points} Point{ team.points !== 1 && 's'}</p>
                 </div>
               )
             })}

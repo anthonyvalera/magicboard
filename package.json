@@ -1,9 +1,9 @@
 {
-  "name": "magic-post",
+  "name": "magic-posts",
   "version": "1.0.0",
   "private": true,
   "homepage": "./views",
-  "description": "GET/POST Magic Afternoon",
+  "description": "Magic Afternoon POSTs",
   "scripts": {
     "watch": "webpack -w",
     "server": "nodemon index.js",
@@ -22,12 +22,14 @@
     "body-parser": "^1.18.2",
     "css-loader": "^0.28.9",
     "ejs": "^2.5.7",
-    "express": "^4.16.2",
+    "express": "^4.15.2",
     "http": "0.0.0",
     "node-sass-chokidar": "0.0.3",
     "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4",
     "style-loader": "^0.20.1"
   },
   "devDependencies": {

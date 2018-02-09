@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box;
 }
+
 html {
-  background: #555c80;
+  background: #11172b;
   -webkit-font-smoothing: antialiased;
   font-family: Nats;
   font-size: 25px;
-  border: 20px solid #ffffff;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -14,13 +14,73 @@ html {
   background-blend-mode: soft-light;
 }
 
+section {
+  max-width: 1150px;
+  margin: 40px auto;
+}
+
 h1 {
-  font-size: 60px;
-  color: #fff;
+  font-size: 100px;
+  margin: 40px 0;
+  color: transparent;
   font-family: NATS;
   letter-spacing: 12px;
-  text-align: center;
   text-transform: uppercase;
   margin: 0;
-  line-height: 1.7;
+  line-height: 1;
+  margin-top: 50px;
+  text-shadow: 6px 6px 0px #fff, 4px 4px 0px #2dd2d6, 2px 2px 0px #03A9F4, 0px 0px 0px #e91e63;
+}
+
+h1 + p {
+  font-size: 30px;
+  color: #fff;
+  margin:  0;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+}
+
+h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.card {
+  background: #12172a;
+  position: relative;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 10px 30px;
+  font-size: 20px;
+  line-height: 0;
+  margin-bottom: 16px;
+}
+
+.card p {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * 1px);
+  left: calc(-1 * 1px);
+  height: calc(100% + 1px * 2);
+  width: calc(100% + 1px * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: 2px;
+  z-index: -1;
+  animation: gradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
 }

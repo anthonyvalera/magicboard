@@ -1,9 +1,10 @@
-const http = require('http');
 const express = require('express');
+const app = express();
+const http = require('http').Server(app);
 const bodyParser = require('body-parser');
 const key = require('./key.js');
+const io = require('socket.io')(http);
 
-var app = express();
 var teams = [];
 
 function awardPoints(teamName, index, points, res) {
@@ -16,7 +17,9 @@ function awardPoints(teamName, index, points, res) {
     //Add points and push solved
     singleTeam.points += points;
     singleTeam.solved.push(index);
-    
+
+    io.emit('update', teams);
+
     return res.json({ message: 'Nice! Correct Answer!'})
   }
   return res.json({ error: 'There\'s no team by that name! Make sure you register first!'})
@@ -47,7 +50,7 @@ app.post('*', (req,res,next) => {
   if (req.url === '/register' && ~findTeam) return res.json({ error: 'That team name has already been chosen!' })
   
   //If they didn't include an answer
-  if (!answer && (req.url !== '/register' || req.url !== '/94030nf')) return res.json({ error: 'You didn\'t include your answer!'})
+  if (!answer && (req.url !== '/register' && req.url !== '/94030nf')) return res.json({ error: 'You didn\'t include your answer!'})
   next();
 })
 
@@ -59,6 +62,7 @@ app.get('/register', (req,res) => res.json({ message: 'POST your team name to /r
 //Register
 app.post('/register', (req,res) => {
   teams.push({name: req.body.team, points: 0, solved: [] });
+  io.emit('update', teams);
   res.json({ message: `Welcome, ${(req.body.team).toUpperCase()}! Get started making a GET request to /1`});
 });
 
@@ -82,6 +86,5 @@ app.post('/:n', (req,res) => {
   else res.json({ message: `Nope, wrong answer!`})
 });
 
-
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`Server is listening on ${PORT}`));
+http.listen(PORT, () => console.log(`Server is listening on ${PORT}`));
