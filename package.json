@@ -24,20 +24,16 @@
     "ejs": "^2.5.7",
     "express": "^4.15.2",
     "http": "0.0.0",
+    "node-sass": "^4.7.2",
     "node-sass-chokidar": "0.0.3",
     "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "sass-loader": "^6.0.6",
     "socket.io": "^2.0.4",
     "socket.io-client": "^2.0.4",
-    "style-loader": "^0.20.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
     "webpack": "^3.10.0"
-  }
+  },
+  "devDependencies": {}
 }
