@@ -71,10 +71,10 @@ app.get('/404', (req,res) => res.json({ message: 'Nothing is here. But thanks fo
 app.get('/roulette', (req,res) => (req.query.name ? awardPoints(req.query.name, '4', 1, res) : res.json({ message: `Looks like your missing something in your request!`})));
 app.post('/94030nf', (req,res) => awardPoints(req.body.team, '3', 1, res));
 
-//Make sure any other request is between 1 and 28
+//Make sure any other request is between 1 and 30
 app.all('/:n', (req,res,next) => {
-  if (req.params.n <= 28 && req.params.n >= 1) next();
-  else return res.json({ error: 'Choose a number between 1 and 28!' });
+  if (req.params.n <= 30 && req.params.n >= 1) next();
+  else return res.json({ error: 'Choose a number between 1 and 30!' });
 });
 
 //Other Routes
@@ -82,7 +82,7 @@ app.get('/:n', (req,res) => res.json({ message: key[req.params.n - 1].message })
 app.post('/:n', (req,res) => {
   const { answer, points, id, include } = key[req.params.n - 1];
 
-  if (req.body.answer == answer || (!!include && req.body.answer.includes(answer))) awardPoints(req.body.team, req.params.n, points, res)
+  if (req.body.answer == answer || (!!include && String(req.body.answer).includes(answer))) awardPoints(req.body.team, req.params.n, points, res)
   else res.json({ message: `Nope, wrong answer!`})
 });
 
