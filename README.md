@@ -1,35 +1,51 @@
 # Magic Posts
 
-Development teams work best when there's clear communication between all roles. This afternoon we'll practice team mechanics by building a simple web page. In groups of three, you'll use a landing page of a site of your choosing and re-create it visually as pixel perfect as you can. 
+For this Magic afternoon, we're going use a combination of GET and POST requests to retrieve and solve puzzles. Each puzzle can be found on this url by making GET requests from `/1` to `/30`. Puzzles range in difficulty/points and can be solved by making a POST request to the same URL.
+
+## Registering your team
+To register your team, make a POST request in JSON to `/register`:
+
+```js
+{
+  "team" : "Origin"
+}
+```
+
+## Retrieve a puzzle
+
+Making a GET request to `/1` returns:
+```js
+{
+  "message" : "How would you select an element by an ID?"
+}
+```
+
+## Solving a puzzle
+To solve, make a POST request to `/1` in the following format:
+```js
+{
+  "team" : "Origin",
+  "answer" : '' 
+}
+```
+
 
 Some resources:
- - [Land Book](https://land-book.com)
- - [Landing Folio](http://www.landingfolio.com/)
- - [Dribble](https://dribbble.com/search?q=landing+page)
-
-## Rules
-Once you've chosen a template/mockup, the teams will break into three positions:
-
-  - One person will explain the page to their team but will not be able to see the project until the page has been built. 
-  - The second person will be able to view both the design and development, but can't drive either position.
-  - The last person will be drive the main development but will not be able to view the design.
+ - [Postman](https://www.getpostman.com/)
 
 ### Level 1
-Choose a landing page, team member roles, and begin creating the project framework.
+Register your team!
 
 ### Level 2:
-Layout the page without a theme, by only creating the grid system, text, and images.
+Solve a puzzle!
 
 ### Level 3:
-Begin styling the page to match the mockup.
-
+Solve 10 puzzles!
 ### Level 4:
-Add additional functionality like SEO, mobile-specific styles, or animations.
+Solve 20 puzzles!
 
 ### Level 5:
-Create an about page using the same styles to show your work. Upload it to Github and Heroku.
+Solve all 30 puzzles!
 
 ## Conclusion
 The specification is otherwise open-ended to the implementation of the page set-up.
-
-* You may choose the form of user interface (e.g. React, Vanilla JS, Vanilla HTML/CSS).
