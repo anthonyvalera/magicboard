@@ -25,7 +25,7 @@ module.exports = [{
     id: 5,
     points: 3,
     message: 'this^2',
-    answer: '25'
+    answer: 25
   },
   {
     id: 6,
@@ -142,7 +142,7 @@ module.exports = [{
   {
     id: 24,
     points: 1,
-    message: 'When day is Anthony\'s birthday? Hint: its this month!',
+    message: 'What day is Anthony\'s birthday? Hint: its this month!',
     answer: '24',
     include: true
   },
