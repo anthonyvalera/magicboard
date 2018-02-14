@@ -8,11 +8,11 @@
     <meta name="description" content="Magic POSTs" />
 
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <% if (teams) { %><script type='text/javascript'>var allTeams = <%- JSON.stringify(teams) %></script><% } %>
+    <% if (teams) { %><script>var allTeams = <%- JSON.stringify(teams) %></script><% } %>
   </head>
   <body>
     <main id="root"></main>
     <footer></footer>
-    <script src="bundle.js" type="text/javascript"></script>
+    <script src="bundle.js"></script>
   </body>
 </html>
