@@ -1,187 +1,197 @@
 module.exports = [{
     id: 1,
-    points: 3,
-    message: 'How would you select an element by an ID?',
-    answer: 'getElementById',
-    include: true
+    points: 1,
+    message: '1 + 1',
+    answer: 2
   },
   {
     id: 2,
     points: 1,
-    message: 'the answer to life',
-    answer: 42
+    message: 'Highest specificity in CSS',
+    answer: 'inline',
+    include: true
   },
   {
     id: 3,
-    points: 1,
-    message: 'POST /94030nf'
+    points: 3,
+    message: 'Make a POST request to /origin with your team name'
   },
   {
     id: 4,
-    points: 1,
-    message: '/roulette?name=GROUP_NAME'
+    points: 3,
+    message: 'GET /roulette with the your team name using the query parameter "name"'
   },
   {
     id: 5,
-    points: 3,
-    message: 'this^2',
-    answer: 25
+    points: 1,
+    message: 'ES6 variable that can never be changed',
+    answer: 'const',
+    include: true
   },
   {
     id: 6,
-    points: 5,
-    message: 'A way to search values in a tree',
-    answer: 'recursion'
+    points: 1,
+    message: 'Main difference between == and ===',
+    answer: 'type',
+    include: true
   },
   {
     id: 7,
     points: 3,
-    message: '10!',
-    answer: 3628800
+    message: '3 * 10!',
+    answer: 10886400
   },
   {
     id: 8,
-    points: 1,
-    message: 'Properly update a component\'s state',
-    answer: 'setState',
-    include: true
-  },
-  {
-    id: 9,
-    points: 1,
-    message: 'Character to define a generator function',
-    answer: '*',
-    include: true
-  },
-  {
-    id: 10,
-    points: 1,
-    message: 'Internal Server Error',
-    answer: 500
-  },
-  {
-    id: 11,
-    points: 3,
-    message: 'Animation functions in CSS',
-    answer: '@keyframes'
-  },
-  {
-    id: 12,
-    points: 3,
-    message: '1100',
-    answer: 12
-  },
-  {
-    id: 13,
-    points: 3,
-    message: 'Newest primitive data type',
-    answer: 'symbol'
-  },
-  {
-    id: 14,
-    points: 1,
-    message: 'Hello',
-    answer: 'World'
-  },
-  {
-    id: 15,
-    points: 1,
-    message: '(!![] + + !![] * 2 ) * 5',
-    answer: 15
-  },
-  {
-    id: 16,
-    points: 1,
-    message: '[NaN + \'a\'].reduce((a,b) => a + b, \'ba\')',
-    answer: 'banana'
-  },
-  {
-    id: 17,
-    points: 5,
-    message: '/e.+/g => GET /14',
-    answer: 'ello'
-  },
-  {
-    id: 18,
-    points: 3,
-    message: 'this',
-    answer: '{}'
-  },
-  {
-    id: 19,
-    points: 3,
-    message: 'after every then(), we must',
-    answer: 'catch',
-    include: true
-  },
-  {
-    id: 20,
-    points: 3,
-    message: 'Elements within the Document Object Model are called...',
-    answer: 'nodes',
-    include: true
-  },
-  {
-    id: 21,
     points: 1,
     message: 'What do we use for version control?',
     answer: 'git'
   },
   {
+    id: 9,
+    points: 3,
+    message: 'Preprocessor for CSS that allows functions and additional functionality',
+    answer: 'LESS',
+    include: true
+  },
+  {
+    id: 10,
+    points: 1,
+    message: 'Resource not found',
+    answer: 404
+  },
+  {
+    id: 11,
+    points: 3,
+    message: 'Originally designed as a mechanism for websites to remember stateful information, this small piece of data is commonly used for authentication',
+    answer: 'cookie',
+    include: true,
+  },
+  {
+    id: 12,
+    points: 1,
+    message: 'Recently popular JavaScript library',
+    answer: 'react',
+    include: true
+  },
+  {
+    id: 13,
+    points: 1,
+    message: 'Current number of Origin Graduates with new careers',
+    answer: 106
+  },
+  {
+    id: 14,
+    points: 1,
+    message: 'What\'s Justin\'s favorite band?',
+    answer: 'beatles',
+    include: true
+  },
+  {
+    id: 15,
+    points: 1,
+    message: 'Where did Christian learn how to code?',
+    answer: 'origin',
+    include: true,
+  },
+  {
+    id: 16,
+    points: 1,
+    message: "'b' + 'a' + + 'a' + 'a'",
+    answer: 'banana'
+  },
+  {
+    id: 17,
+    points: 3,
+    message: 'Properties passed to a component in JSX can be accessed in the render method using ______',
+    answer: 'this.props'
+  },
+  {
+    id: 18,
+    points: 3,
+    message: 'Amount of times a promise can resolve',
+    answer: 1,
+    include: true
+  },
+  {
+    id: 19,
+    points: 3,
+    message: 'A popular build tool that bundles modules into smaller files.',
+    answer: 'webpack',
+    include: true
+  },
+  {
+    id: 20,
+    points: 5,
+    message: 'A collection of nodes within the Document Object Model are called...',
+    answer: 'NodeList',
+    include: true
+  },
+  {
+    id: 21,
+    points: 1,
+    message: 'Term for a tool that allows developers to create guidelines and discover inconsistencies within their code',
+    answer: 'lint',
+    include: true
+  },
+  {
     id: 22,
     points: 1,
-    message: 'What is Justin\'s favorite color?',
-    answer: 'pink'
+    message: 'What is Ogun\'s favorite rock band?',
+    answer: 'pink floyd'
   },
   {
     id: 23,
     points: 1,
-    message: 'What is Michael B\'s favorite climbing gear?',
-    answer: 'grigri'
+    message: 'Command to see all your collections in a MongoDB database',
+    answer: 'show collections'
   },
   {
     id: 24,
     points: 1,
-    message: 'What day is Anthony\'s birthday? Hint: its this month!',
-    answer: '24',
+    message: 'Title of Anthony\'s last San Diego JS talk',
+    answer: 'cool console commands',
     include: true
   },
   {
     id: 25,
-    points: 1,
-    message: 'What is Jeff\'s favorite football team?',
-    answer: 'colts'
+    points: 3,
+    message: 'The console object isn\'t specifically JavaScript but rather part of the.....',
+    answer: 'web api',
+    include: true
   },
   {
     id: 26,
-    points: 1,
-    message: 'How many students were in Origin\'s first class?',
-    answer: 6
+    points: 3,
+    message: 'Array method that removes the first item and returns it',
+    answer: 'shift',
+    include: true
   },
   {
     id: 27,
-    points: 1,
-    message: 'What is Christian\'s favorite surf spot?',
-    answer: 'pb point',
+    points: 3,
+    message: 'Object method that returns an array of enumerable properties within that object',
+    answer: 'keys',
     include: true
   },
   {
     id: 28,
-    points: 1,
-    message: 'Where is Michael R.\'s hometown?',
-    answer: 'boston'
+    points: 2,
+    message: 'Smallest possible positive number in JavaScript',
+    answer: '5e-324'
   },
   {
     id: 29,
-    points: 1,
-    message: 'What is Ryan\'s favorite video game?',
-    answer: 'verdun'
+    points: 5,
+    message: 'Describes the performance or complexity of an algorithm',
+    answer: 'big O notation',
+    include: true
   },
   {
     id: 30,
-    points: 1,
-    message: 'What universe does Origin use for naming things internally?',
-    answer: 'star wars',
+    points: 5,
+    message: 'Infamous ineffective sorting algorithm',
+    answer: 'bogosort',
     include: true
   }
 ];

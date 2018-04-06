@@ -71,7 +71,7 @@ app.post('/register', (req,res) => {
 app.get('/404', (req,res) => res.json({ message: 'Nothing is here. But thanks for checking!' }));
 app.get('/list', (req,res) => res.json({ teams }));
 app.get('/roulette', (req,res) => (req.query.name ? awardPoints(req.query.name, '4', 1, res) : res.json({ message: `Looks like your missing something in your request!`})));
-app.post('/94030nf', (req,res) => awardPoints(req.body.team, '3', 1, res));
+app.post('/origin', (req,res) => awardPoints(req.body.team, '3', 1, res));
 
 app.delete('/team', (req,res,next) => {
   var newTeams = teams.filter(t => t.name !== req.body.name);
