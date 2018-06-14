@@ -9,7 +9,7 @@ var teams = [];
 
 function awardPoints(teamName, index, points, res) {
   //If their team exists
-  if (singleTeam = teams.find(t => t.name === teamName)) {
+  if (singleTeam = teams.find(t => t.name == teamName)) {
 
     //and they haven't already solved the problem
     if (~singleTeam.solved.indexOf(index)) return res.json({ message: 'You\'ve already got points for this!' });
@@ -51,7 +51,7 @@ app.post('*', (req,res,next) => {
   if (req.url === '/register' && ~findTeam) return res.json({ error: 'That team name has already been chosen!' })
   
   //If they didn't include an answer
-  if (!answer && (req.url !== '/register' && req.url !== '/94030nf')) return res.json({ error: 'You didn\'t include your answer!'})
+  if (!answer && (req.url !== '/register' && req.url !== '/origin')) return res.json({ error: 'You didn\'t include your answer!'})
   next();
 })
 
@@ -70,11 +70,11 @@ app.post('/register', (req,res) => {
 //Custom GET routes
 app.get('/404', (req,res) => res.json({ message: 'Nothing is here. But thanks for checking!' }));
 app.get('/list', (req,res) => res.json({ teams }));
-app.get('/roulette', (req,res) => (req.query.name ? awardPoints(req.query.name, '4', 1, res) : res.json({ message: `Looks like your missing something in your request!`})));
+app.get('/roulette', (req,res) => (req.query.name ? awardPoints(req.query.name, '4', 1, res) : res.json({ message: `Looks like your missing "?name=" in your request!`})));
 app.post('/origin', (req,res) => awardPoints(req.body.team, '3', 1, res));
 
 app.delete('/team', (req,res,next) => {
-  var newTeams = teams.filter(t => t.name !== req.body.name);
+  var newTeams = teams.filter(t => t.name != req.body.name);
   teams = newTeams;
   io.emit('update', teams);
   return res.send('Team deleted');
@@ -91,7 +91,9 @@ app.get('/:n', (req,res) => res.json({ message: key[req.params.n - 1].message })
 app.post('/:n', (req,res) => {
   const { answer, points, id, include } = key[req.params.n - 1];
 
-  if (req.body.answer == answer || (!!include && String(req.body.answer).includes(answer))) awardPoints(req.body.team, req.params.n, points, res)
+  if (req.body.answer == answer || String(req.body.answer).toLowerCase().includes(answer))
+    awardPoints(req.body.team, req.params.n, points, res)
+
   else res.json({ message: `Nope, wrong answer!`})
 });
 
