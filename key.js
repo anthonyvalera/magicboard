@@ -7,91 +7,92 @@ module.exports = [{
 {
   id: 2,
   points: 1,
-  message: 'Highest specificity in CSS',
-  answer: 'inline',
+  message: 'HEX code for the color lemonchiffon',
+  answer: '#fffacd',
   include: true
 },
 {
   id: 3,
   points: 3,
-  message: 'Make a POST request to /origin with your team name'
+  message: 'Make a PUT request to /origin with your team name'
 },
 {
   id: 4,
   points: 3,
-  message: 'GET /roulette with the your team name using the query parameter "name"'
+  message: 'Make a GET request to /giveuspoints with your query "?team=_______"'
 },
 {
   id: 5,
   points: 1,
-  message: 'ES6 variable that can never be changed',
-  answer: 'const',
+  message: 'const variables are ______-scoped',
+  answer: 'block',
   include: true
 },
 {
   id: 6,
   points: 1,
-  message: 'Main difference between == and ===',
-  answer: 'type',
+  message: 'How do we exit a switch statement?',
+  answer: 'break',
   include: true
 },
 {
   id: 7,
   points: 3,
-  message: '3 * 10!',
-  answer: 10886400
+  message: '2 * 10!',
+  answer: 7257600,
+  include: true
 },
 {
   id: 8,
   points: 1,
-  message: 'What do we use for version control?',
-  answer: 'git'
+  message: 'What is Anthony\'s team name?',
+  answer: 'wildcards'
 },
 {
   id: 9,
   points: 3,
   message: 'Preprocessor for CSS that allows functions and additional functionality',
-  answer: 'LESS',
+  answer: 'syntactical sugar',
   include: true
 },
 {
   id: 10,
   points: 1,
-  message: 'Resource not found',
-  answer: 404
+  message: 'FORBIDDEN',
+  answer: 403
 },
 {
   id: 11,
   points: 3,
-  message: 'Originally designed as a mechanism for websites to remember stateful information, this small piece of data is commonly used for authentication',
-  answer: 'cookie',
+  message: 'Common interview technique used by companies to gauge technical skills',
+  answer: 'whiteboarding',
   include: true,
 },
 {
   id: 12,
   points: 1,
-  message: 'Recently popular JavaScript library',
-  answer: 'react',
+  message: 'Commonly used At-rule',
+  answer: 'media',
   include: true
 },
 {
   id: 13,
   points: 1,
-  message: 'Current number of Origin Graduates with new careers',
-  answer: 106
+  message: 'JavaScript uniquely uses this kind of inheritance',
+  answer: 'prototypal'
 },
 {
   id: 14,
   points: 1,
-  message: 'What\'s Justin\'s favorite band?',
-  answer: 'beatles',
+  message: 'Properties in an object whose values are functions can be described as _________',
+  answer: 'methods',
   include: true
 },
 {
   id: 15,
   points: 1,
-  message: 'Where did Christian learn how to code?',
-  answer: 'origin',
+  message: 'Where is Cameron from?',
+  answer: 'england',
   include: true,
 },
 {
@@ -103,28 +104,28 @@ module.exports = [{
 {
   id: 17,
   points: 3,
-  message: 'Properties passed to a component in JSX can be accessed in the render method using ______',
-  answer: 'this.props'
+  message: 'We use this function prototype method to overwrite the value of *this*, allowing class methods to access parent class properties',
+  answer: 'bind'
 },
 {
   id: 18,
   points: 3,
-  message: 'Amount of times a promise can resolve',
-  answer: 1,
+  message: 'Adrian\'s team name',
+  answer: '60k',
   include: true
 },
 {
   id: 19,
   points: 3,
-  message: 'A popular build tool that bundles modules into smaller files.',
-  answer: 'webpack',
+  message: 'A popular package manager for JavaScript',
+  answer: 'npm',
   include: true
 },
 {
   id: 20,
   points: 5,
-  message: 'A collection of nodes within the Document Object Model are called...',
-  answer: 'NodeList',
+  message: 'JavaScript run-time environment that executes JavaScript code server-side',
+  answer: 'node',
   include: true
 },
 {
@@ -137,61 +138,61 @@ module.exports = [{
 {
   id: 22,
   points: 1,
-  message: 'What is Ogun\'s favorite rock band?',
-  answer: 'pink floyd'
+  message: 'Write a SQL query to fetch the names of all products in the MySQL table store',
+  answer: 'SELECT name from store'
 },
 {
   id: 23,
   points: 1,
-  message: 'Command to see all your collections in a MongoDB database',
-  answer: 'show collections'
+  message: 'Command to query all documents in the MongoDB collection products',
+  answer: 'db.products.find'
 },
 {
   id: 24,
   points: 1,
-  message: 'Title of Anthony\'s last San Diego JS talk',
-  answer: 'cool console commands',
+  message: 'Which data type would you use for a phone number?',
+  answer: 'string',
   include: true
 },
 {
   id: 25,
   points: 3,
-  message: 'The console object isn\'t specifically JavaScript but rather part of the.....',
-  answer: 'web api',
+  message: 'Keyword that adds a record into a table in a MySQL database',
+  answer: 'insert',
   include: true
 },
 {
   id: 26,
   points: 3,
-  message: 'Array method that removes the first item and returns it',
-  answer: 'shift',
+  message: 'Array method that removes the last item and returns it',
+  answer: 'pop',
   include: true
 },
 {
   id: 27,
   points: 3,
-  message: 'Object method that returns an array of enumerable properties within that object',
-  answer: 'keys',
+  message: 'Which package would you use to connect a react component to a redux store?',
+  answer: 'react-redux',
   include: true
 },
 {
   id: 28,
   points: 2,
-  message: 'Smallest possible positive number in JavaScript',
-  answer: '5e-324'
+  message: 'Commonly named function that passed down state from your store to a connected redux component',
+  answer: 'mapStateToProps'
 },
 {
   id: 29,
   points: 5,
-  message: 'Describes the performance or complexity of an algorithm',
-  answer: 'big O notation',
+  message: 'Describes the performance or complexity of an algorithm that has a constant runtime',
+  answer: 'O(1)',
   include: true
 },
 {
   id: 30,
   points: 5,
-  message: 'Infamous ineffective sorting algorithm',
-  answer: 'bogosort',
+  message: 'Origin\'s current contest!',
+  answer: 'monopoly',
   include: true
 }
 ];

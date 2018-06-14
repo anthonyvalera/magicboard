@@ -34,6 +34,7 @@ app.use(function(req, res, next) {
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use('/', express.static('build'));
+app.use('/', express.static('public'));
 
 
 //Validation checks
@@ -70,8 +71,8 @@ app.post('/register', (req,res) => {
 //Custom GET routes
 app.get('/404', (req,res) => res.json({ message: 'Nothing is here. But thanks for checking!' }));
 app.get('/list', (req,res) => res.json({ teams }));
-app.get('/roulette', (req,res) => (req.query.name ? awardPoints(req.query.name, '4', 1, res) : res.json({ message: `Looks like your missing "?name=" in your request!`})));
-app.post('/origin', (req,res) => awardPoints(req.body.team, '3', 1, res));
+app.get('/giveuspoints', (req,res) => (req.query.team ? awardPoints(req.query.team, '4', 1, res) : res.json({ message: `Looks like your missing "?team=" in your request!`})));
+app.put('/origin', (req,res) => awardPoints(req.body.team, '3', 1, res));
 
 app.delete('/team', (req,res,next) => {
   var newTeams = teams.filter(t => t.name != req.body.name);
