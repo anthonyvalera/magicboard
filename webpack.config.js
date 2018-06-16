@@ -1,33 +1,43 @@
-var webpack = require('webpack');
-var path = require('path');
+const path = require('path');
 
-var config = {
-  entry: [path.resolve(__dirname, 'src/App.jsx'), path.resolve(__dirname, 'src/styles.scss')],
+const config = {
+  entry: [path.resolve(__dirname, 'src/index.jsx?'), path.resolve(__dirname, 'src/styles.scss')],
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [{
-      test: /\.jsx$/,
+      test: /\.jsx?$/,
       exclude: /node_modules/,
       use: {
-        loader: 'babel-loader'
-      }
+        loader: 'babel-loader',
+      },
     }, {
       test: /\.scss$/,
       use: [{
-          loader: "style-loader"
+        loader: 'style-loader',
+      },
+      {
+        loader: 'css-loader',
+      },
+      {
+        loader: 'sass-loader',
+      },
+      ],
+    }, {
+      // Match woff2 in addition to patterns like .woff?v=1.1.1.
+      test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+      use: {
+        loader: 'url-loader',
+        options: {
+          limit: 50000,
+          mimetype: 'application/font-woff',
+          name: './fonts/[name].[ext]',
         },
-        {
-          loader: "css-loader"
-        },
-        {
-          loader: "sass-loader"
-        }
-      ]
-    }]
-  }
+      },
+    }],
+  },
 };
 
 module.exports = config;

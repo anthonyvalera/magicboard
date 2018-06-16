@@ -2,13 +2,13 @@
   "name": "magic-posts",
   "version": "1.0.0",
   "private": true,
-  "homepage": "./views",
   "description": "Magic Afternoon POSTs",
   "scripts": {
     "watch": "webpack -w",
     "server": "nodemon index.js",
-    "build": "webpack",
-    "start": "npm run build && node index.js"
+    "build": "webpack -p",
+    "start": "npm run build && node index.js",
+    "dev": "concurrently \"webpack -w\" \"nodemon server\""
   },
   "author": "",
   "license": "ISC",
@@ -20,20 +20,31 @@
     "axios": "^0.17.1",
     "babel-loader": "^8.0.0-beta.0",
     "body-parser": "^1.18.2",
-    "css-loader": "^0.28.9",
     "ejs": "^2.5.7",
     "express": "^4.15.2",
+    "file-loader": "^1.1.11",
     "http": "0.0.0",
-    "node-sass": "^4.7.2",
-    "node-sass-chokidar": "0.0.3",
     "path": "^0.12.7",
-    "react": "^16.2.0",
+    "react": "^16.4.1",
     "react-dom": "^16.2.0",
-    "sass-loader": "^6.0.6",
     "socket.io": "^2.0.4",
     "socket.io-client": "^2.0.4",
+    "url-loader": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "css-loader": "^0.28.9",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "node-sass": "^4.7.2",
+    "node-sass-chokidar": "0.0.3",
+    "sass-lint": "^1.12.1",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
     "webpack": "^3.10.0"
-  },
-  "devDependencies": {}
+  }
 }

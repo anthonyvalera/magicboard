@@ -1,103 +1,130 @@
+$bg: #11172b;
+$bg-text: #fff;
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  background: #11172b;
   -webkit-font-smoothing: antialiased;
-  font-family: 'NATS2', sans-serif;
+  background: $bg;
+  background-blend-mode: soft-light;
+  box-sizing: border-box;
+  color: $bg-text;
+  font-family: 'NATS', Avenir, Helvetica, sans-serif;
   font-size: 25px;
   height: 100%;
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  background-blend-mode: soft-light;
+  padding: 0;
 }
 
 section {
-  max-width: 1150px;
   margin: 40px auto;
+  max-width: 1150px;
 }
 
 h1 {
-  font-size: 100px;
-  margin: 40px 0;
   color: transparent;
   font-family: NATS;
+  font-size: 100px;
   letter-spacing: 12px;
-  text-transform: uppercase;
-  margin: 0;
   line-height: 1;
-  margin-top: 50px;
-  text-shadow: 6px 6px 0px #fff, 4px 4px 0px #2dd2d6, 2px 2px 0px #03A9F4, 0px 0px 0px #e91e63;
-}
-
-h1 + p {
-  font-size: 30px;
-  color: #fff;
-  margin:  0;
+  margin: 50px 0 0;
+  text-shadow: 6px 6px 0 $bg-text, 4px 4px 0 #2dd2d6, 2px 2px 0 #03a9f4, 0 0 0 #e91e63;
   text-transform: uppercase;
-  letter-spacing: 9px;
+
+  & + p {
+    font-size: 30px;
+    letter-spacing: 9px;
+    margin: 0;
+    text-transform: uppercase;
+  }
 }
 
 h2 {
   font-size: 20px;
-  text-transform: uppercase;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .card {
-  background: #12172a;
-  position: relative;
+  align-items: center;
+  background: $bg;
   border-radius: 2px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
-  padding: 10px 30px;
   font-size: 20px;
+  justify-content: space-between;
   line-height: 0;
   margin-bottom: 16px;
-}
+  padding: 10px 30px;
+  position: relative;
 
-.card:first-of-type {
-  background: none;
-}
+  &::after {
+    animation: gradient 3s ease alternate infinite;
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+    background-size: 300% 300%;
+    border-radius: 2px;
+    content: '';
+    height: calc(100% + 1px * 2);
+    left: calc(-1 * 1px);
+    position: absolute;
+    top: calc(-1 * 1px);
+    width: calc(100% + 1px * 2);
+    z-index: -1;
+  }
 
-.card:first-of-type h2, .card:first-of-type p {
-  font-size: 30px;
-}
+  p {
+    font-size: 15px;
+    text-transform: uppercase;
+  }
 
-.card:nth-of-type(2) h2, .card:nth-of-type(2) p {
-  font-size: 25px;
-}
+  &:first-of-type {
+    background: none;
 
-.card:nth-of-type(3) h2, .card:nth-of-type(3) p {
-  font-size: 20px;
-}
+    & h2,
+    p {
+      font-size: 30px;
+    }
+  }
 
+  &:nth-of-type(2) {
+    h2,
+    p {
+      font-size: 25px;
+    }
+  }
 
-.card p {
-  font-size: 15px;
-  text-transform: uppercase;
-}
-
-.card:after {
-  content: '';
-  position: absolute;
-  top: calc(-1 * 1px);
-  left: calc(-1 * 1px);
-  height: calc(100% + 1px * 2);
-  width: calc(100% + 1px * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-  border-radius: 2px;
-  z-index: -1;
-  animation: gradient 3s ease alternate infinite;
-  background-size: 300% 300%;
+  &:nth-of-type(3) {
+    h2,
+    p {
+      font-size: 20px;
+    }
+  }
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 50% }
-  50% { background-position: 100% 50% }
-  100% { background-position: 0% 50% }
+  0% {
+    background-position: 0% 50%;
+  }50% {
+    background-position: 100% 50%;
+  }100% {
+    background-position: 0% 50%;
+  }
+}
+
+@font-face {
+  font-family: 'NATS';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/NATS.woff2') format('woff2');
 }
