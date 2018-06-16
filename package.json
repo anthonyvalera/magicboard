@@ -5,9 +5,9 @@
   "description": "Magic Afternoon POSTs",
   "scripts": {
     "watch": "webpack -w",
-    "server": "nodemon index.js",
+    "server": "nodemon server",
     "build": "webpack -p",
-    "start": "npm run build && node index.js",
+    "start": "npm run build && node server",
     "dev": "concurrently \"webpack -w\" \"nodemon server\""
   },
   "author": "",
