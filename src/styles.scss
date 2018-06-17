@@ -86,6 +86,10 @@ h2 {
   p {
     font-size: 15px;
     text-transform: uppercase;
+
+    span {
+      margin-right: 7px;
+    }
   }
 
   &:first-of-type {

@@ -93,7 +93,7 @@ app.get('/:n', (req,res) => res.json({ message: key[req.params.n - 1].message })
 app.post('/:n', (req,res) => {
   const { answer, points } = key[req.params.n - 1];
   
-  if (Array.isArray(answer) && answer.some(a => checkAnswer(req.body.answer, answer)))
+  if (Array.isArray(answer) && answer.some(a => checkAnswer(req.body.answer, a)))
     awardPoints(req.body.team, req.params.n, points, res);
   
   else if (checkAnswer(req.body.answer, answer))

@@ -24,7 +24,7 @@ class Team extends Component {
         <h2>{ name }</h2>
         {
           this.state.details
-            ? <p>{ solved.map(i => <span>{i}</span>) }</p>
+            ? <p>{ solved.sort((a,b) => parseInt(a) - parseInt(b)).map(i => <span>{i}</span>) }</p>
             : <p>{ points } Point{!points && 's'}</p>
         }
       </div>
